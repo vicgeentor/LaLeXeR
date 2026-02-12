@@ -20,6 +20,18 @@ Modular design:
 > Every change to the codebase should be done through pull
 > requests, even if they will be self-approved.
 
+## Branch structure
+
+Where possible, please use a test-driven approach in your pr's. 
+This makes reviewing far easier and helps in modularity.
+To do this, try and structure your branches as follows:
+
+- A commit writing tests, causing the automated tests to fail
+- A commit implementing the feature, causing the automated tests (one of which you added in the previous commit!) to pass
+- The inevitable "I forgot a semicolon" commit
+
+This structures allows people reviewing your pr to look at the test first, which makes it far easier to understand your code!
+
 ## Commit messages
 
 We'll adopt the following commit message syntax:
