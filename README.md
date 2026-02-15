@@ -40,6 +40,7 @@ We'll adopt the following commit message syntax:
 - **core**: core feature (see [Strategy](#strategy))
 - **feat**: some other feature
 - **fix**: fix some issue
+- **test**: implemented one ore more tests
 - **refactor**: code refactoring
 - **docs**: updating documentation like the README or
   [Haddock](https://haskell-haddock.readthedocs.io/latest/)
