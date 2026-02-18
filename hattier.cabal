@@ -1,18 +1,18 @@
 cabal-version:      3.0
-name:               LaLeXeR
+name:               hattier
 version:            0.1.0.0
-synopsis:           LaTe- Haskell formatter
+synopsis:           Cute Haskell formatter
 license:            BSD-3-Clause
 license-file:       LICENSE
 author:             vicgeentor
-maintainer:         github@vicgeentor.nl
+maintainer:         hattier@vicgeentor.nl
 category:           Development
 build-type:         Simple
 
 common warnings
     ghc-options: -Wall
 
-executable lalexer
+executable hattier
     import:           warnings
     main-is:          Main.hs
     -- other-modules:
