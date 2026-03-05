@@ -1,24 +1,24 @@
-# LaLeXeR
+# Hattier
 
 We format stuff.
-
-# Strategy
-
-Modular design:
-
-- We start with the *primary* features that we want (like
-  indentation) so that `lalexer` can be run after another
-  formatter like [ormolu](https://github.com/tweag/ormolu)
-  or
-  [stylish-haskell](https://github.com/haskell/stylish-haskell).
-- After that, we can implement *core* features to make
-  LaLeXeR self-sufficient.
 
 # Contributing
 
 > [!IMPORTANT]
 > Every change to the codebase should be done through pull
 > requests, even if they will be self-approved.
+
+## Strategy
+
+Modular design:
+
+- We start with the *primary* features that we want (like
+  indentation) so that `hattier` can be run after another
+  formatter like [ormolu](https://github.com/tweag/ormolu)
+  or
+  [stylish-haskell](https://github.com/haskell/stylish-haskell).
+- After that, we can implement *core* features to make
+  `hattier` self-sufficient.
 
 ## Branch structure
 
@@ -56,5 +56,5 @@ parts:
 
 1. Make issue with a title like "Ticket: implementing
    alignment of case expressions"
-2. Assign yourself to work on a ticket by leaving a comment
-   to the issue like "Assigned to vicgeentor"
+2. Assign yourself to work on a ticket by adding yourself
+   to the assignees of the relevant issue.

@@ -10,17 +10,22 @@
       system:
       let
         pkgs = inputs.nixpkgs.legacyPackages.${system};
+        pkg = pkgs.haskellPackages.developPackage { root = ./.; };
       in
       {
-        devShells.default = pkgs.mkShell {
-          packages = [
-            (pkgs.haskellPackages.ghcWithPackages (
-              ps: with ps; [
-                cabal-install
-                haskell-language-server
-                hlint
-              ]
-            ))
+        packages = rec {
+          hattier = pkg;
+          default = hattier;
+        };
+        devShells.default = pkgs.haskellPackages.shellFor {
+          packages = _: [ pkg ];
+          nativeBuildInputs = with pkgs; [
+            cabal-install
+            ghc
+            haskellPackages.cabal-fmt
+            haskellPackages.hindent
+            haskell-language-server
+            hlint
           ];
         };
       }
