@@ -31,10 +31,12 @@ library
   hs-source-dirs:  src
   exposed-modules:
     Format
+    Parser
     Types
 
   build-depends:
     , base
+    , ghc   ^>=9.10.3
     , mtl   ^>=2.3.2
     , text  ^>=2.1.4
 
@@ -54,8 +56,11 @@ test-suite hattier-test
   other-modules:  Unit.Format
   build-depends:
     , base
+    , ghc               ^>=9.10.3
     , hattier
     , QuickCheck        ^>=2.17.1.0
     , tasty             ^>=1.5.3
     , tasty-hunit       ^>=0.10.2
     , tasty-quickcheck  ^>=0.11.1
+    , tasty-hunit       ^>=0.10.2
+    , filepath          ^>=1.5.4.0
